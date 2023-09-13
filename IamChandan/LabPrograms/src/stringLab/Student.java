@@ -10,8 +10,8 @@ public class Student {
 	short sem;
 	float gpa;
 	float cpga;
-	
-Student(String name){
+	Student(){};
+	Student(String name){
 	this.name = name;
 }
 Student(String name,GregorianCalendar date, short sem){
@@ -35,6 +35,9 @@ String extractInitials() {
 String removeWhiteSpaces() {
 return name.replaceAll(" ", "");
 }
-
-
+void addMarks(float marks) {
+	System.out.println("adding all these marks to the student's marks");
+	this.cpga = marks;
+	System.out.println("added all the marks");
+}
 }
